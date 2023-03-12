@@ -4,9 +4,72 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
   <title>cssBayan</title>
 </head>
-<body>
-  
+<body class="page">
+  <svg style="display: none">
+    <symbol id="cross" width="25" height="25" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 4.5C13.0523 4.5 13.5 4.94772 13.5 5.5V19.5C13.5 20.0523 13.0523 20.5 12.5 20.5C11.9477 20.5 11.5 20.0523 11.5 19.5V5.5C11.5 4.94772 11.9477 4.5 12.5 4.5Z" fill="currentColor"/>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M4.5 12.5C4.5 11.9477 4.94772 11.5 5.5 11.5H19.5C20.0523 11.5 20.5 11.9477 20.5 12.5C20.5 13.0523 20.0523 13.5 19.5 13.5H5.5C4.94772 13.5 4.5 13.0523 4.5 12.5Z" fill="currentColor"/>
+    </symbol>
+  </svg>    
+  <header class="page__header">
+  </header>
+  <main class="page__content">
+    <div class="page-wrapper">
+      <h1 class="page__title">CSS Bayan</h1>
+      <ul class="meme-list">
+        <li class="meme-list__item bayan-item">
+          <label class="bayan-item__container">
+            <div class="bayan-item__headline">
+              <h2 class="bayan-item__title">You cant's just copy and paste CSS</h2>
+              <!-- <img class="bayan-item__cross" src="./assets/cross.svg" alt="" aria-hidden="true"> -->
+              <svg class="bayan-item__cross" width="25" height="25"><use xlink:href="#cross"></use></svg>
+            </div>
+            <input class="bayan-item__check-button visually-hidden" type="radio" name="meme" checked>
+            <img class="bayan-item__meme-img" src="./assets/copy-paste-css.jpg" alt="">
+          </label>
+        </li>
+        <li class="meme-list__item bayan-item">
+          <label class="bayan-item__container">
+            <div class="bayan-item__headline">
+              <h2 class="bayan-item__title">Keep calm and carry on</h2>
+              <!-- <img class="bayan-item__cross" src="./assets/cross.svg" alt="" aria-hidden="true"> -->
+              <svg class="bayan-item__cross" width="25" height="25"><use xlink:href="#cross"></use></svg>
+            </div>
+            <input class="bayan-item__check-button visually-hidden" type="radio" name="meme">
+            <img class="bayan-item__meme-img" src="./assets/keep-calm.jpg" alt="">
+          </label>
+        </li>
+        <li class="meme-list__item bayan-item">
+          <label class="bayan-item__container">
+            <div class="bayan-item__headline">
+              <h2 class="bayan-item__title">Dude, where is JS</h2>
+              <!-- <img class="bayan-item__cross" src="./assets/cross.svg" alt="" aria-hidden="true"> -->
+              <svg class="bayan-item__cross" width="25" height="25"><use xlink:href="#cross"></use></svg>
+            </div>
+            <input class="bayan-item__check-button visually-hidden" type="radio" name="meme">
+            <img class="bayan-item__meme-img" src="./assets/where-js.jpg" alt="">
+          </label>
+        </li>
+        <li class="meme-list__item bayan-item">
+          <label class="bayan-item__container">
+            <div class="bayan-item__headline">
+              <h2 class="bayan-item__title">Work-life balance</h2>
+              <!-- <img class="bayan-item__cross" src="./assets/cross.svg" alt="" aria-hidden="true"> -->
+              <svg class="bayan-item__cross" width="25" height="25"><use xlink:href="#cross"></use></svg>
+            </div>
+            <input class="bayan-item__check-button visually-hidden" type="radio" name="meme">
+            <img class="bayan-item__meme-img" src="./assets/work-life-balance.jpg" alt="">
+          </label>
+        </li>
+      </ul>
+    </div>
+  </main>
+  <footer class="page__footer">
+    <a class="link" href="https://rs.school/">RS-School</a>
+    <a class="link" href="https://github.com/Firebrand-RS">GitHub</a>
+  </footer>
 </body>
 </html>

@@ -1,0 +1,161 @@
+@font-face {
+  font-family: 'Pragmatica';
+  src: url('./assets/Pragmatica-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+.page {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5eb;
+}
+
+html, .page {
+  height: 100%;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.page-wrapper {
+  width: 93.75%;
+  margin: 0 auto;
+}
+
+.page__content {
+  flex-grow: 1;
+  font-family: 'Pragmatica';
+}
+
+.meme-list {
+  color: blue;
+}
+
+.meme-list:hover {
+  color: black;
+}
+
+.bayan-item__cross {
+  opacity: 0;
+  transition-property: transform;
+  transition-duration: 0.1s;
+}
+
+.meme-list:hover .bayan-item__cross {
+  opacity: 1;
+}
+
+.bayan-item__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+}
+
+.bayan-item__container:hover .bayan-item__cross {
+  transform: rotateZ(45deg);
+}
+
+.bayan-item__container:hover .bayan-item__meme-img {
+  margin-bottom: 0.5rem;
+  width: 300px;
+  opacity: 1;
+}
+
+.bayan-item__container:active .bayan-item__meme-img {
+  transform: scale(0.90);
+  filter: contrast(0.5) brightness(1.5);
+}
+
+.bayan-item__container:active .bayan-item__headline {
+  color: blue;
+}
+
+.page__title {
+  margin: 0.5rem 0;
+  font-size: 2rem;
+}
+
+.meme-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.bayan-item {
+  border-top: 0.15rem solid #e2e6e6;
+}
+
+.bayan-item__headline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.bayan-item__title {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.bayan-item__meme-img {
+  width: 0%;
+  flex-basis: 0%;
+  aspect-ratio: 1 / 1;
+  opacity: 0;
+  transform: scale(1);
+  transition-property: opacity, width;
+  transition-duration: 0.7s, 0.3s;
+}
+
+.bayan-item__check-button:checked + .bayan-item__meme-img {
+  margin-bottom: 0.5rem;
+  width: 300px;
+  opacity: 1;
+}
+
+.page__footer {
+  text-align: center;
+}
+
+/*Adaptive layout*/
+
+@media (min-width: 820px) {
+  .page__title {
+    font-size: 3rem;
+  }
+  .bayan-item__title {
+    font-size: 1.5rem;
+  }
+  .page-wrapper {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1500px) {
+  .page__title {
+    font-size: 4rem;
+  }
+  .bayan-item__title {
+    font-size: 2rem;
+  }
+  .page-wrapper {
+    width: 70%;
+  }
+}
