@@ -1,0 +1,88 @@
+.page {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5eb;
+}
+
+html, .page {
+  height: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.page-wrapper {
+  width: max-content;
+  margin: 0 auto;
+}
+
+.page__content {
+  flex-grow: 1;
+}
+
+.meme-list {
+  color: blue;
+}
+
+.meme-list:hover {
+  color: black;
+}
+
+.bayan-item__cross {
+  opacity: 0;
+}
+
+.meme-list:hover .bayan-item__cross {
+  opacity: 1;
+}
+
+.bayan-item__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page__title {
+  margin: 0;
+}
+
+.meme-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.bayan-item {
+  border-top: 2px solid #e2e6e6;
+}
+
+.bayan-item__headline {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.bayan-item__title {
+  margin: 10px 0;
+}
+
+.bayan-item__meme-img {
+  display: none;
+}
+
+.bayan-item__check-button:checked + .bayan-item__meme-img {
+  display: inline;
+}
+
+.page__footer {
+  text-align: center;
+}
